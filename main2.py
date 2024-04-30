@@ -1,38 +1,51 @@
 import gurobipy as gp
 from gurobipy import GRB
 
-
-def knapsack_solver(values, weights, capacity):
-    n = len(values)
-    model = gp.Model("knapsack")
+def solve_production_planning(products, profit, production_time,production_capacity, demand=None):
+    # Create a new model
+    model = gp.Model("Production_Planning")
 
     # Decision variables
-    x = model.addVars(n, vtype=GRB.BINARY, name="x")
+    production = {}
+    for product in products:
+        production[product] = model.addVar(vtype=GRB.INTEGER, name=f"production_{product}")
 
-    # Objective function
-    model.setObjective(sum(values[i] * x[i] for i in range(n)), GRB.MAXIMIZE)
+    # Objective function: maximize total profit
+    model.setObjective(gp.quicksum(production[product] * profit[product] for product in products), GRB.MAXIMIZE)
 
-    # Constraint: capacity
-    model.addConstr(sum(weights[i] * x[i] for i in range(n)) <= capacity)
+    # Capacity constraint: total production time must not exceed production capacity
+    model.addConstr(gp.quicksum(production[product] * production_time[product] for product in products) <= production_capacity)
 
-    # Solve
+    # Demand constraints (if available)
+    if demand:
+        for product in products:
+            if product in demand:
+                model.addConstr(production[product] >= demand[product])
+
+    # Optimize the model
     model.optimize()
 
-    # Extract solution
-    selected_items = [i for i in range(n) if x[i].x > 0.5]  # Choose items with x[i] > 0.5
-    total_value = sum(values[i] for i in selected_items)
-    total_weight = sum(weights[i] for i in selected_items)
+    # Print solution
+    if model.status == GRB.OPTIMAL:
+        print("Optimal production plan:")
+        for product in products:
+            print(f"Product {product}: {production[product].x} units")
 
-    return selected_items, total_value, total_weight
+        max = 0
+        for product in products:
+            max += production[product].x * profit[product]
+        print(max)
+    else:
+        print("No solution found.")
 
 
-# Example usage
-values = [60, 100, 120]
-weights = [10, 20, 200]
-capacity = 50
+# Example data
+products = ["Product_A", "Product_B", "Product_C"]
+profit = {"Product_A": 10, "Product_B": 8, "Product_C": 6}
+production_time = {"Product_A": 1, "Product_B": 2, "Product_C": 1}
+production_capacity = 10
+demand = {"Product_A": 3, "Product_C": 2}  # Demand for Product_A and Product_C, Product_B is optional
 
-selected_items, total_value, total_weight = knapsack_solver(values, weights, capacity)
-print("Selected items:", selected_items)
-print("Total value:", total_value)
-print("Total weight:", total_weight)
+# Solve the production planning problem
+production = solve_production_planning(products,profit, production_time,production_capacity, demand)
 
