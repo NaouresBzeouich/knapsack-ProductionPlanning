@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>970</width>
+    <height>863</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="title">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>20</y>
+     <width>711</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 700 48pt &quot;Script MT Bold&quot;;
+color: rgb(170, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string>Félix le Fermier : 
+Une Aventure Ingénieuse</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>901</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Dans le paisible village de Champvert,  
+ vivait un fermier astucieux du nom de Félix. 
+ Félix aimait résoudre des énigmes 
+ et trouver des moyens ingénieux d'améliorer sa ferme.
+ 
+  Un jour, alors qu'il se promenait dans 
+ son champ, Félix rencontra deux défis 
+ passionnants qui allaient mettre à l'épreuve 
+ sa ruse et son ingéniosité</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="knapSack">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>710</y>
+     <width>311</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Problème du Sac à Dos</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="planningProduction">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>710</y>
+     <width>311</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Problème de Planification de la Production</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

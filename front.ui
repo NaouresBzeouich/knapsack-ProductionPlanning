@@ -6,109 +6,91 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>474</width>
-    <height>299</height>
+    <width>970</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="nextPage">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>530</y>
-      <width>89</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>20</y>
-      <width>381</width>
+      <x>530</x>
+      <y>490</y>
+      <width>271</width>
       <height>71</height>
      </rect>
     </property>
-    <property name="html">
-     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-hr { height: 1px; border-width: 0; }
-li.unchecked::marker { content: &quot;\2610&quot;; }
-li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:28pt; color:#ed333b; vertical-align:super;&quot;&gt;WELCOME TO THE TECH SHOW&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(245, 245, 183);
+border-color: rgb(170, 170, 127);
+font: 16pt &quot;Segoe Print&quot;;</string>
+    </property>
+    <property name="text">
+     <string>commencer l'aventure</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QLabel" name="photo">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>170</y>
-      <width>89</width>
-      <height>25</height>
+      <x>0</x>
+      <y>330</y>
+      <width>561</width>
+      <height>521</height>
      </rect>
     </property>
     <property name="text">
-     <string>PLNE</string>
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../../Downloads/Premium Vector _ Farmer with farm animals in the grass 1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="PL">
+   <widget class="QLabel" name="title">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>170</y>
-      <width>89</width>
-      <height>25</height>
+      <x>170</x>
+      <y>70</y>
+      <width>711</width>
+      <height>181</height>
      </rect>
     </property>
-    <property name="text">
-     <string>PL</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>200</y>
-      <width>113</width>
-      <height>25</height>
-     </rect>
+    <property name="styleSheet">
+     <string notr="true">font: 700 48pt &quot;Script MT Bold&quot;;
+color: rgb(170, 0, 0);</string>
     </property>
     <property name="text">
-     <string>            TEST </string>
+     <string>Félix le Fermier : 
+Une Aventure Ingénieuse</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>200</y>
-      <width>113</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>     SAC A DOS</string>
-    </property>
-   </widget>
+   <zorder>photo</zorder>
+   <zorder>title</zorder>
+   <zorder>nextPage</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>474</width>
-     <height>22</height>
+     <width>970</width>
+     <height>23</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuhomePage">
+    <property name="title">
+     <string>homePage</string>
+    </property>
+   </widget>
+   <addaction name="menuhomePage"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
