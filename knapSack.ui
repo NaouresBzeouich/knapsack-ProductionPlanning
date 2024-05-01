@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>knapSacStory</class>
+ <widget class="QWidget" name="knapSacStory">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>972</width>
+    <height>866</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QLabel" name="text">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>901</width>
+     <height>531</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Félix rencontra un voyageur  égaré  
+  dans les champs. 
+  Le voyageur cherchait à remplir son sac 
+ de provisions  pour son voyage, mais il 
+ ne pouvait  pas tout emporter.
+ 
+ Félix, avec son flair habituel, 
+ lui proposa une solution pour choisir 
+ judicieusement les objets à emporter 
+ sans se surcharger.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="toKnapSackPage">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>670</y>
+     <width>311</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(250, 250, 186);
+border-color: rgb(170, 170, 127);
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>voir la solution de Félix</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>500</y>
+     <width>211</width>
+     <height>361</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/Premium Vector _ Boy backpacker traveler with backpack 1.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
