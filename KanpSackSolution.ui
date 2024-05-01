@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>967</width>
+    <width>972</width>
     <height>863</height>
    </rect>
   </property>
@@ -16,6 +16,565 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
+  <widget class="QLabel" name="sacADos">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>50</y>
+     <width>301</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/Hiking backpack for hiking and camping_ Backpack icon satchel vector doodle illustration.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>901</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>sachant que la capacité maximal du sac 
+ de voyageur est           g</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="capacity">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>60</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>641</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Le voyageur ordonna les objets 
+ en fonction de leur importance, 
+ attribuant à chacun une valeur.</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="pomme">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>871</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string> une Pomme :   100g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="boutielleDEau">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>340</y>
+     <width>871</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Bouteille d'eau    500 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="lampeDePoche">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>390</y>
+     <width>881</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Lampe de poche    1000 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="carte">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>440</y>
+     <width>891</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Carte    200 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="kitSecours">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>490</y>
+     <width>881</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Kit de premiers secours 500 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="telephone">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>540</y>
+     <width>891</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Téléphone portable    200 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="livre">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>590</y>
+     <width>891</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Livre    500 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="sacDeCouchage">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>640</y>
+     <width>901</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Sac de couchage    1500 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="tente">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>680</y>
+     <width>901</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Tente    2000 g</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="corde">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>720</y>
+     <width>901</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Corde    500 g</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_3">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>300</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_4">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>340</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_5">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>390</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_6">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>440</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_7">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>490</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_8">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>540</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_9">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>590</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_10">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>640</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_11">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>680</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_12">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>720</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>importance :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="pommeValue">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>300</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="bouteilleDEauValue">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>350</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lampeValue">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>400</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="carteValue">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>440</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="kitSecoursValue">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>490</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="telephoneValue">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>540</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="livreValue">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>590</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="sacDeCouchageValue">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>640</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="tenteValue">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>680</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="cordeValue">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>730</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="toKnapSackPage">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>790</y>
+     <width>311</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(250, 250, 186);
+border-color: rgb(170, 170, 127);
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>voir la proposition de Félix</string>
+   </property>
+  </widget>
+  <zorder>text</zorder>
+  <zorder>sacADos</zorder>
+  <zorder>capacity</zorder>
+  <zorder>text_2</zorder>
+  <zorder>pomme</zorder>
+  <zorder>boutielleDEau</zorder>
+  <zorder>lampeDePoche</zorder>
+  <zorder>carte</zorder>
+  <zorder>kitSecours</zorder>
+  <zorder>telephone</zorder>
+  <zorder>livre</zorder>
+  <zorder>sacDeCouchage</zorder>
+  <zorder>tente</zorder>
+  <zorder>corde</zorder>
+  <zorder>text_3</zorder>
+  <zorder>text_4</zorder>
+  <zorder>text_5</zorder>
+  <zorder>text_6</zorder>
+  <zorder>text_7</zorder>
+  <zorder>text_8</zorder>
+  <zorder>text_9</zorder>
+  <zorder>text_10</zorder>
+  <zorder>text_11</zorder>
+  <zorder>text_12</zorder>
+  <zorder>pommeValue</zorder>
+  <zorder>bouteilleDEauValue</zorder>
+  <zorder>lampeValue</zorder>
+  <zorder>carteValue</zorder>
+  <zorder>kitSecoursValue</zorder>
+  <zorder>telephoneValue</zorder>
+  <zorder>livreValue</zorder>
+  <zorder>sacDeCouchageValue</zorder>
+  <zorder>tenteValue</zorder>
+  <zorder>cordeValue</zorder>
+  <zorder>toKnapSackPage</zorder>
  </widget>
  <resources/>
  <connections/>
