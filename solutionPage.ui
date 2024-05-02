@@ -38,9 +38,9 @@ font: 16pt &quot;Segoe Print&quot;;</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>520</y>
+     <y>420</y>
      <width>331</width>
-     <height>341</height>
+     <height>441</height>
     </rect>
    </property>
    <property name="text">
