@@ -130,7 +130,7 @@ color: rgb(0, 85, 0);</string>
 color: rgb(0, 85, 0);</string>
    </property>
    <property name="text">
-    <string>Lampe de poche    1000 g</string>
+    <string>Lampe de poche    200 g</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="carte">

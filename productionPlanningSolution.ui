@@ -55,7 +55,7 @@ color: rgb(0, 0, 127);</string>
  maximal de production de           kg</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="production_capacity">
+  <widget class="QTextEdit" name="productionCapacity">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -389,7 +389,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
   </widget>
   <zorder>text</zorder>
   <zorder>text_2</zorder>
-  <zorder>production_capacity</zorder>
+  <zorder>productionCapacity</zorder>
   <zorder>pommeDeTerre</zorder>
   <zorder>tomate</zorder>
   <zorder>carotte</zorder>

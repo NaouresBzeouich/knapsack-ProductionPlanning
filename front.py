@@ -117,13 +117,22 @@ class MainWindow(QMainWindow):
         self.solutionPage.result.setText(result)
         self.stacked_layout.setCurrentIndex(4)
     def showPageSolutionFromProductionPlanning(self):
-        print(self.knapSacpage2.capacity.text())
+        # hawa jeyik
         self.stacked_layout.setCurrentIndex(4)
     def showPageproductionPlanning2(self):
         self.stacked_layout.setCurrentIndex(6)
     def showPageproductionPlanning3(self):
-        self.stacked_layout.setCurrentIndex(7)
+        capacity = self.productionPlanning2.productionCapacity
 
+        products = []
+        profit = {}
+        production_time = {}
+
+        print(products)
+        print(profit)
+        print(production_time)
+        print(capacity)
+        self.stacked_layout.setCurrentIndex(7)
     def knapSacResult(self,keys, values, capacity):
         # making sure that capacity is a positive number
         if not(capacity.isdigit()):
@@ -141,6 +150,8 @@ class MainWindow(QMainWindow):
             if int(values[key]) == 0:
                 return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
             values[key] = int(values[key])
+        print(values)
+        print(capacity)
         return knapSac.knapsack_solver(keys,values,capacity)
 
 app = QApplication([])

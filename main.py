@@ -15,7 +15,7 @@ def knapsack_solver(keys, values, capacity):
         "sacDeCouchage": 1500,
         "tente": 2000,
         "corde": 500}
-    print(len(weights))
+
     model = gp.Model("knapsack")
 
     # Decision variables
@@ -39,13 +39,15 @@ def knapsack_solver(keys, values, capacity):
 
 
 # Example usage
-keys = ["livre", "sacDeCouchage", "tente"]
-values = {"livre": 500,
-        "sacDeCouchage": 1500,
-        "tente": 2000,
-        "corde": 500}
+keys = ["livre", "sacDeCouchage", "tente", "lampe"]
+values = {"livre": 47433,
+        "sacDeCouchage": 1232,
+        "tente": 122,
+        "corde": 1333,
+        "lampe": 32
+          }
 
-capacity = 0
+capacity = 1650
 
 #first we must check that every key has a value
 test = True
