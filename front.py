@@ -2,7 +2,7 @@ import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QStackedLayout, QWidget
 from PyQt6.uic import loadUi
 import knapSac
-
+import productionPlannuing
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -117,21 +117,45 @@ class MainWindow(QMainWindow):
         self.solutionPage.result.setText(result)
         self.stacked_layout.setCurrentIndex(4)
     def showPageSolutionFromProductionPlanning(self):
-        # hawa jeyik
+        demand ={}
+
+        result = self.productionPlanningResult(products, profit, production_time, capacity,demand)
+        print(result)
+        self.solutionPage.result.setText(result)
         self.stacked_layout.setCurrentIndex(4)
     def showPageproductionPlanning2(self):
         self.stacked_layout.setCurrentIndex(6)
     def showPageproductionPlanning3(self):
-        capacity = self.productionPlanning2.productionCapacity
-
-        products = []
+        global capacity
+        capacity = self.productionPlanning2.capacity.text()
+        global products
+        products=[]
+        global profit
         profit = {}
+        global production_time
         production_time = {}
 
-        print(products)
-        print(profit)
-        print(production_time)
-        print(capacity)
+        pommeDeTerre_checked = self.productionPlanning2.pommeDeTerre.isChecked()
+        if pommeDeTerre_checked:
+            products.append("pommeDeTerre")
+            profit["pommeDeTerre"] = self.productionPlanning2.pommedeterreprofit.text()
+            production_time["pommeDeTerre"]  = self.productionPlanning2.pommedeterretime.text()
+        tomate_checked = self.productionPlanning2.tomate.isChecked()
+        if tomate_checked:
+            products.append("tomate")
+            profit["tomate"] = self.productionPlanning2.tomatesprofit.text()
+            production_time["tomate"] = self.productionPlanning2.tomatestime.text()
+        carotte_checked = self.productionPlanning2.carotte.isChecked()
+        if carotte_checked:
+            products.append("carotte")
+            profit["carotte"] = self.productionPlanning2.carottesprofit.text()
+            production_time["carotte"] = self.productionPlanning2.carottestime.text()
+        fraise_checked = self.productionPlanning2.fraise.isChecked()
+        if fraise_checked:
+            products.append("fraise")
+            profit["fraise"] = self.productionPlanning2.fraisesprofit.text()
+            production_time["fraise"] = self.productionPlanning2.fraisestime.text()
+
         self.stacked_layout.setCurrentIndex(7)
     def knapSacResult(self,keys, values, capacity):
         # making sure that capacity is a positive number
@@ -154,6 +178,30 @@ class MainWindow(QMainWindow):
         print(capacity)
         return knapSac.knapsack_solver(keys,values,capacity)
 
+    def productionPlanningResult(self,products, profit,production_time, capacity):
+        # making sure that capacity is a positive number
+        if not (capacity.isdigit()):
+            return " les fermiers n'avaient pas correctement saisir la capacité ! \n Félix ne pouvait pas trouver une solution \n "
+        if int(capacity) <= 0:
+            return " les femiers avaient donné un entier negative pour la capacité maximal ! \n la capacité maximal doit etre un entier strictement positive \n "
+        capacity = int(capacity)
+        # making sure there's  min a key checked
+        if not products:
+            return " aucune information etaint inserré ,\n comment Félix pourrait-il trouver une solution ? \n "
+            # making sure that every value entered is an enteger
+        for key in products:
+            if not (profit[key].isdigit()):
+                return " les valeurs données par les fermiers etaient incorrect ! \n \n Félix ne pouvait pas trouver une solution \n"
+            if int(profit[key]) == 0:
+                return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
+            profit[key] = int(profit[key])
+            # testing product time is a correct number
+            if not (production_time[key].isdigit()):
+                return " les valeurs données par les fermiers  etaient incorrect ! \n \n Félix ne pouvait pas trouver une solution \n"
+            if int(production_time[key]) == 0:
+                return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
+            production_time[key] = int(production_time[key])
+        result = productionPlannuing.solve_production_planning(products,profit,production_time,capacity,demand)
 app = QApplication([])
 window = MainWindow()
 window.resize(1000, 900)

@@ -55,16 +55,6 @@ color: rgb(0, 0, 127);</string>
  maximal de production de           kg</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="productionCapacity">
-   <property name="geometry">
-    <rect>
-     <x>530</x>
-     <y>60</y>
-     <width>141</width>
-     <height>41</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QCheckBox" name="pommeDeTerre">
    <property name="geometry">
     <rect>
@@ -151,16 +141,6 @@ color: rgb(0, 0, 127);</string>
     <string>benefice par kilogramme:</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="pommeProfile">
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>400</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="text_4">
    <property name="geometry">
     <rect>
@@ -176,26 +156,6 @@ color: rgb(0, 0, 127);</string>
    </property>
    <property name="text">
     <string>temps de production par kilogramme: </string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="pommeTemps">
-   <property name="geometry">
-    <rect>
-     <x>670</x>
-     <y>440</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="tomateTemps">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>540</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
    </property>
   </widget>
   <widget class="QLabel" name="text_5">
@@ -232,26 +192,6 @@ color: rgb(0, 0, 127);</string>
     <string>temps de production par kilogramme: </string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="tomateProfit">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>500</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="carotteTemps">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>640</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="text_7">
    <property name="geometry">
     <rect>
@@ -286,26 +226,6 @@ color: rgb(0, 0, 127);</string>
     <string>temps de production par kilogramme: </string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="carotteProfit">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>600</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="fraiseTemps">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>740</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="text_9">
    <property name="geometry">
     <rect>
@@ -338,16 +258,6 @@ color: rgb(0, 0, 127);</string>
    </property>
    <property name="text">
     <string>temps de production par kilogramme: </string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="fraiseProfit">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>700</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="toProductionPlanningPage2">
@@ -387,31 +297,96 @@ font: 12pt &quot;Segoe UI&quot;;</string>
     <bool>true</bool>
    </property>
   </widget>
-  <zorder>text</zorder>
-  <zorder>text_2</zorder>
-  <zorder>productionCapacity</zorder>
-  <zorder>pommeDeTerre</zorder>
-  <zorder>tomate</zorder>
-  <zorder>carotte</zorder>
-  <zorder>fraise</zorder>
-  <zorder>text_3</zorder>
-  <zorder>text_4</zorder>
-  <zorder>pommeProfile</zorder>
-  <zorder>pommeTemps</zorder>
-  <zorder>tomateTemps</zorder>
-  <zorder>text_5</zorder>
-  <zorder>text_6</zorder>
-  <zorder>tomateProfit</zorder>
-  <zorder>carotteTemps</zorder>
-  <zorder>text_7</zorder>
-  <zorder>text_8</zorder>
-  <zorder>carotteProfit</zorder>
-  <zorder>fraiseTemps</zorder>
-  <zorder>text_9</zorder>
-  <zorder>text_10</zorder>
-  <zorder>fraiseProfit</zorder>
-  <zorder>toProductionPlanningPage2</zorder>
-  <zorder>label</zorder>
+  <widget class="QLineEdit" name="capacity">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>60</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="pommedeterreprofit">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>400</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="pommedeterretime">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>450</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="tomatesprofit">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>500</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="tomatestime">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>540</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="carottesprofit">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>600</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="carottestime">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>640</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="fraisesprofit">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>710</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="fraisestime">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>750</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

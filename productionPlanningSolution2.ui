@@ -172,46 +172,6 @@ color: rgb(0, 0, 127);</string>
     <string>quantité : </string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="pommeDemande">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>240</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="tomateDemande">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>290</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="carotteDemande">
-   <property name="geometry">
-    <rect>
-     <x>280</x>
-     <y>340</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="fraiseDemande">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>400</y>
-     <width>141</width>
-     <height>31</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -247,6 +207,46 @@ font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
    <property name="text">
     <string>voir la proposition de Félix</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="pommedemande">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>240</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="tomateDemande">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>290</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="CarottesDemande">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>340</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="fraisesdemandes">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>390</y>
+     <width>131</width>
+     <height>31</height>
+    </rect>
    </property>
   </widget>
  </widget>

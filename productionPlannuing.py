@@ -25,27 +25,18 @@ def solve_production_planning(products, profit, production_time,production_capac
     # Optimize the model
     model.optimize()
 
+    result = ""
+
     # Print solution
     if model.status == GRB.OPTIMAL:
-        print("Optimal production plan:")
+        result = "la solution de Félix etait : \n  planter les produits :\n"
         for product in products:
-            print(f"Product {product}: {production[product].x} units")
+            result += "product "+product+" : "+production[product].x + " fois "
 
         max = 0
         for product in products:
             max += production[product].x * profit[product]
-        print(max)
+        result += "le benefice total est :"+max
     else:
-        print("No solution found.")
-
-
-# Example data
-products = ["Product_A", "Product_B", "Product_C"]
-profit = {"Product_A": 10, "Product_B": 8, "Product_C": 6}
-production_time = {"Product_A": 1, "Product_B": 2, "Product_C": 1}
-production_capacity = 200.5
-demand = {"Product_A": 3, "Product_C": 2}  # Demand for Product_A and Product_C, Product_B is optional
-
-# Solve the production planning problem
-production = solve_production_planning(products,profit, production_time,production_capacity, demand)
-
+        result += "pas de solution ! "
+    return result
