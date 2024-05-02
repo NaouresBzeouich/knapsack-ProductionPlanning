@@ -47,7 +47,7 @@ font: 16pt &quot;Segoe Print&quot;;</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../Downloads/Download Cartoon young farmer with hen and dog for free.jpg</pixmap>
+    <pixmap>solutionPage.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
