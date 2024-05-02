@@ -72,7 +72,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../Downloads/75d5dc1e843fd669c8212e336fab7c51.jpg</pixmap>
+    <pixmap>producionPlannig.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

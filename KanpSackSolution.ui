@@ -29,7 +29,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../../Downloads/Hiking backpack for hiking and camping_ Backpack icon satchel vector doodle illustration.jpg</pixmap>
+    <pixmap>knapSacSolution.jpg</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>
