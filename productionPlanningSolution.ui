@@ -16,6 +16,402 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
+  <widget class="QLabel" name="text">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>961</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>Les fermiers présentent à Félix les différents types 
+ de produits qu'ils produisent à la coopérative,
+ ainsi que le bénéfice qu'ils tirent de la vente de 
+ chaque produit et le temps nécessaire pour 
+ produire chaque unité du produit.</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>901</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>la coopérative pourrait avoir une capacité 
+ maximal de production de           kg</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="production_capacity">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>60</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="pommeDeTerre">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>871</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Pommes de terre
+</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="tomate">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>490</y>
+     <width>871</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Tomates</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="carotte">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>590</y>
+     <width>871</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Carottes</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="fraise">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>690</y>
+     <width>871</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
+color: rgb(0, 85, 0);</string>
+   </property>
+   <property name="text">
+    <string>Fraises</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_3">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>400</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>benefice par kilogramme:</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="pommeProfile">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>400</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_4">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>440</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>temps de production par kilogramme: </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="pommeTemps">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>440</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="tomateTemps">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>540</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_5">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>500</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>benefice par kilogramme:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_6">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>540</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>temps de production par kilogramme: </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="tomateProfit">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>500</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="carotteTemps">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>640</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_7">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>600</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>benefice par kilogramme:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_8">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>640</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>temps de production par kilogramme: </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="carotteProfit">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>600</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="fraiseTemps">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>740</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_9">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>700</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>benefice par kilogramme:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_10">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>740</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+   </property>
+   <property name="text">
+    <string>temps de production par kilogramme: </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="fraiseProfit">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>700</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="toProductionPlanningPage2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>800</y>
+     <width>261</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(250, 250, 186);
+border-color: rgb(170, 170, 127);
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+   <property name="text">
+    <string>suivant </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>480</y>
+     <width>271</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/Free Vector _ Sticker template with root vegetables and shovel isolated.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>text</zorder>
+  <zorder>text_2</zorder>
+  <zorder>production_capacity</zorder>
+  <zorder>pommeDeTerre</zorder>
+  <zorder>tomate</zorder>
+  <zorder>carotte</zorder>
+  <zorder>fraise</zorder>
+  <zorder>text_3</zorder>
+  <zorder>text_4</zorder>
+  <zorder>pommeProfile</zorder>
+  <zorder>pommeTemps</zorder>
+  <zorder>tomateTemps</zorder>
+  <zorder>text_5</zorder>
+  <zorder>text_6</zorder>
+  <zorder>tomateProfit</zorder>
+  <zorder>carotteTemps</zorder>
+  <zorder>text_7</zorder>
+  <zorder>text_8</zorder>
+  <zorder>carotteProfit</zorder>
+  <zorder>fraiseTemps</zorder>
+  <zorder>text_9</zorder>
+  <zorder>text_10</zorder>
+  <zorder>fraiseProfit</zorder>
+  <zorder>toProductionPlanningPage2</zorder>
+  <zorder>label</zorder>
  </widget>
  <resources/>
  <connections/>

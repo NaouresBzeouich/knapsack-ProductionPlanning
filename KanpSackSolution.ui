@@ -522,7 +522,7 @@ color: rgb(0, 85, 0);</string>
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="toKnapSackPage">
+  <widget class="QPushButton" name="toSolutionPage">
    <property name="geometry">
     <rect>
      <x>300</x>
@@ -574,7 +574,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
   <zorder>sacDeCouchageValue</zorder>
   <zorder>tenteValue</zorder>
   <zorder>cordeValue</zorder>
-  <zorder>toKnapSackPage</zorder>
+  <zorder>toSolutionPage</zorder>
  </widget>
  <resources/>
  <connections/>

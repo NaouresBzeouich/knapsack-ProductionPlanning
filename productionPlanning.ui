@@ -41,30 +41,11 @@ color: rgb(0, 0, 127);</string>
  se déroule comme sur des roulettes.</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QPushButton" name="toProductionPlanningPage">
    <property name="geometry">
     <rect>
-     <x>700</x>
-     <y>430</y>
-     <width>271</width>
-     <height>431</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>../../../Downloads/Free Vector _ Sticker template with root vegetables and shovel isolated.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="toKnapSackPage">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>660</y>
+     <x>450</x>
+     <y>620</y>
      <width>311</width>
      <height>71</height>
     </rect>
@@ -78,6 +59,28 @@ font: 12pt &quot;Segoe UI&quot;;</string>
     <string>voir la solution de Félix</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>560</y>
+     <width>471</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../../Downloads/75d5dc1e843fd669c8212e336fab7c51.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>text</zorder>
+  <zorder>label</zorder>
+  <zorder>toProductionPlanningPage</zorder>
  </widget>
  <resources/>
  <connections/>
