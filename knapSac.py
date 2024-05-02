@@ -6,7 +6,6 @@ def knapsack_solver(keys, values, capacity):
     weights = {
         "pomme": 100,
         "bouteilleDEeau": 500,
-        "couverture": 1000,
         "lampe": 200,
         "carte": 200,
         "kitSecours": 500,
@@ -50,7 +49,7 @@ def knapsack_solver(keys, values, capacity):
         result = "la solution de Félix etait : \n apporter les objet :\n"
         for elt in selected_items:
             result +=" - "+elt+"\n"
-        result +=" le voyageur aurait donc un total de valeur d'importance maximal est :"+str(total_value) +"\n et son sac à dos paiserait :"+str(total_weight)
+        result +=" le voyageur aurait donc un total de valeur d'importance maximal est :"+str(total_value) +"\n et son sac à dos pèserait :"+str(total_weight)
 
     return result
 

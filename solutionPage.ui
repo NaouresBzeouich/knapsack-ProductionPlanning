@@ -53,6 +53,23 @@ font: 16pt &quot;Segoe Print&quot;;</string>
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QLabel" name="result">
+   <property name="geometry">
+    <rect>
+     <x>33</x>
+     <y>39</y>
+     <width>891</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 13pt &quot;Segoe Script&quot;;
+color: rgb(170, 0, 0);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
