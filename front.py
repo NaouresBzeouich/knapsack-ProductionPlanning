@@ -118,8 +118,53 @@ class MainWindow(QMainWindow):
         self.stacked_layout.setCurrentIndex(4)
     def showPageSolutionFromProductionPlanning(self):
         demand ={}
+        result = ""
+        pommeDeTerre_checked = self.productionPlanning3.pommeDeTerre.isChecked()
+        if pommeDeTerre_checked:
+            if "pommeDeTerre" in products:
+                test = self.productionPlanning3.pommedemande.text()
+                if not test.isdigit() :
+                    result += "Félix ne peut pas resoudre ! \n la valeur de pomme de terre demandé par le client doit etre positive \n"
+                else:
+                    demand["pommeDeTerre"] =  int(test)
+            else:
+                result += " oh no !  \n les clients veulent avoire de pomme de terre \n alors que les fermiers ne peuvent pas produire de pomme de terre  \n "
 
-        result = self.productionPlanningResult(products, profit, production_time, capacity,demand)
+        tomate_checked = self.productionPlanning3.tomate.isChecked()
+        if tomate_checked:
+            if "tomate" in products:
+                test = self.productionPlanning3.tomateDemande.text()
+                if not test.isdigit():
+                    result += "Félix ne peut pas resoudre ! \n la valeur de tomate demandé par le client doit etre positive \n"
+                else:
+                    demand["tomate"] = int(test)
+            else:
+                result += " oh no !  \n les clients veulent avoire de tomate \n alors que les fermiers ne peuvent pas produire de tomate \n "
+
+        carotte_checked = self.productionPlanning3.carotte.isChecked()
+        if carotte_checked:
+            if "carotte" in products:
+                test = self.productionPlanning3.CarottesDemande.text()
+                if not test.isdigit() :
+                    result += "Félix ne peut pas resoudre ! \n la valeur de carotte demandé par le client doit etre positive \n"
+                else:
+                    demand["carotte"] =  int(test)
+            else:
+                result += " oh no !  \n les clients veulent avoire de Carottes \n alors que les fermiers ne peuvent pas produire de Carottes \n "
+
+        fraise_checked = self.productionPlanning3.fraise.isChecked()
+        if fraise_checked:
+            if "fraise" in products:
+                test = self.productionPlanning3.fraisesdemandes.text()
+                if not test.isdigit():
+                    result += "Félix ne peut pas resoudre ! \n la valeur de fraise demandé par le client doit etre positive \n"
+                else:
+                    demand["fraise"] = int(test)
+            else:
+                result += " oh no !  \n les clients veulent avoire de fraise \n alors que les fermiers ne peuvent pas produire de fraise \n "
+
+        if not result:
+            result = self.productionPlanningResult(products, profit, production_time, capacity,demand)
         print(result)
         self.solutionPage.result.setText(result)
         self.stacked_layout.setCurrentIndex(4)
@@ -178,7 +223,7 @@ class MainWindow(QMainWindow):
         print(capacity)
         return knapSac.knapsack_solver(keys,values,capacity)
 
-    def productionPlanningResult(self,products, profit,production_time, capacity):
+    def productionPlanningResult(self,products, profit,production_time, capacity,demand):
         # making sure that capacity is a positive number
         if not (capacity.isdigit()):
             return " les fermiers n'avaient pas correctement saisir la capacité ! \n Félix ne pouvait pas trouver une solution \n "
@@ -202,6 +247,7 @@ class MainWindow(QMainWindow):
                 return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
             production_time[key] = int(production_time[key])
         result = productionPlannuing.solve_production_planning(products,profit,production_time,capacity,demand)
+        return result
 app = QApplication([])
 window = MainWindow()
 window.resize(1000, 900)
