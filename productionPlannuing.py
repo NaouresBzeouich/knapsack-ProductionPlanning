@@ -1,7 +1,7 @@
 import gurobipy as gp
 from gurobipy import GRB
 
-def solve_production_planning(products, profit, production_time,production_capacity, demand=None):
+def solve_production_planning(products, profit, production_time,production_capacity, demand=None) :
     # Create a new model
     model = gp.Model("Production_Planning")
 
@@ -21,7 +21,6 @@ def solve_production_planning(products, profit, production_time,production_capac
         for product in products:
             if product in demand:
                 model.addConstr(production[product] >= demand[product])
-
     # Optimize the model
     model.optimize()
 
@@ -29,14 +28,15 @@ def solve_production_planning(products, profit, production_time,production_capac
 
     # Print solution
     if model.status == GRB.OPTIMAL:
-        result = "la solution de Félix etait : \n  planter les produits :\n"
+        result = "La solution optimale est la suivante :\n  Plan de production :\n"
         for product in products:
-            result += "product "+product+" : "+production[product].x + " fois "
+            result += f"Produit {product}: {production[product].x} unités\n"
 
-        max = 0
-        for product in products:
-            max += production[product].x * profit[product]
-        result += "le benefice total est :"+max
+        total_profit = sum(production[product].x * profit[product] for product in products)
+        result += f"Le bénéfice total est : {total_profit}"
     else:
-        result += "pas de solution ! "
+        result = "Pas de solution trouvée."
+
+    print(result)
+
     return result
