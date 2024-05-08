@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>965</width>
-    <height>863</height>
+    <width>1085</width>
+    <height>1030</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>10</y>
      <width>961</width>
-     <height>221</height>
+     <height>161</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -35,167 +35,11 @@ color: rgb(0, 0, 127);</string>
  d'un produit donné.</string>
    </property>
   </widget>
-  <widget class="QCheckBox" name="pommeDeTerre">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>240</y>
-     <width>871</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
-color: rgb(0, 85, 0);</string>
-   </property>
-   <property name="text">
-    <string>Pommes de terre
-</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="tomate">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>290</y>
-     <width>871</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
-color: rgb(0, 85, 0);</string>
-   </property>
-   <property name="text">
-    <string>Tomates</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="carotte">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>340</y>
-     <width>871</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
-color: rgb(0, 85, 0);</string>
-   </property>
-   <property name="text">
-    <string>Carottes</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="fraise">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>390</y>
-     <width>871</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 26pt &quot;Segoe Script&quot;;
-color: rgb(0, 85, 0);</string>
-   </property>
-   <property name="text">
-    <string>Fraises</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="text_3">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>240</y>
-     <width>221</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
-color: rgb(0, 0, 127);</string>
-   </property>
-   <property name="text">
-    <string>quantité : </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="text_4">
-   <property name="geometry">
-    <rect>
-     <x>200</x>
-     <y>290</y>
-     <width>221</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
-color: rgb(0, 0, 127);</string>
-   </property>
-   <property name="text">
-    <string>quantité : </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="text_5">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>340</y>
-     <width>221</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
-color: rgb(0, 0, 127);</string>
-   </property>
-   <property name="text">
-    <string>quantité : </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="text_6">
-   <property name="geometry">
-    <rect>
-     <x>160</x>
-     <y>390</y>
-     <width>221</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
-color: rgb(0, 0, 127);</string>
-   </property>
-   <property name="text">
-    <string>quantité : </string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>470</y>
-     <width>471</width>
-     <height>391</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>productionPlanningSolution2.jpg</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>true</bool>
-   </property>
-  </widget>
   <widget class="QPushButton" name="toSolutionPage">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>600</y>
+     <x>750</x>
+     <y>910</y>
      <width>311</width>
      <height>71</height>
     </rect>
@@ -209,44 +53,229 @@ font: 12pt &quot;Segoe UI&quot;;</string>
     <string>voir la proposition de Félix</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="pommedemande">
+  <widget class="QLabel" name="error">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>240</y>
-     <width>131</width>
+     <x>40</x>
+     <y>780</y>
+     <width>661</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Segoe Script&quot;;
+color: rgb(181, 98, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="BoxCreatordemande" native="true">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>230</y>
+     <width>921</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <widget class="QLineEdit" name="produit">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>40</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="text_3">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+    </property>
+    <property name="text">
+     <string>Produit demandé : </string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="production">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="add">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>30</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(250, 250, 186);
+border-color: rgb(170, 170, 127);
+font: 12pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ADD</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="text_4">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>40</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(0, 0, 127);</string>
+    </property>
+    <property name="text">
+     <string>Production  : </string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="text_9">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>190</y>
+     <width>221</width>
      <height>31</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="tomateDemande">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>290</y>
-     <width>131</width>
-     <height>31</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Segoe Script&quot;;
+color: rgb(98, 74, 181);</string>
+   </property>
+   <property name="text">
+    <string>Demandes</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
    </property>
   </widget>
-  <widget class="QLineEdit" name="CarottesDemande">
+  <widget class="QLabel" name="Produits">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>340</y>
-     <width>131</width>
-     <height>31</height>
+     <x>120</x>
+     <y>440</y>
+     <width>251</width>
+     <height>341</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(98, 74, 181);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="fraisesdemandes">
+  <widget class="QLabel" name="productionDemande">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>470</x>
+     <y>440</y>
+     <width>251</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Segoe Script&quot;;
+color: rgb(181, 98, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_10">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
      <y>390</y>
-     <width>131</width>
-     <height>31</height>
+     <width>231</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Segoe Script&quot;;
+color: rgb(98, 74, 181);</string>
+   </property>
+   <property name="text">
+    <string>Produits demandé</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="text_11">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>390</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Segoe Script&quot;;
+color: rgb(98, 74, 181);</string>
+   </property>
+   <property name="text">
+    <string>Production demandé</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="error_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>850</y>
+     <width>991</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 18pt &quot;Segoe Script&quot;;
+color: rgb(181, 98, 74);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
    </property>
   </widget>
  </widget>

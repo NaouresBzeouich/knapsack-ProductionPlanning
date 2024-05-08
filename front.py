@@ -1,13 +1,17 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QStackedLayout, QWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel , QStackedLayout, QWidget , QPushButton , QLineEdit , QGroupBox
 from PyQt6.uic import loadUi
 import knapSac
 import productionPlannuing
+"""
+todo : find children for all items in the planning production 
+than figure out how to clone and add to the Allitems QgroupBox 
+
+"""
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.initUI()
-
     def initUI(self):
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
@@ -50,7 +54,27 @@ class MainWindow(QMainWindow):
         # for productionPlanning pages
         self.productionPlanning1.toProductionPlanningPage.clicked.connect(self.showPageproductionPlanning2)
         self.productionPlanning2.toProductionPlanningPage2.clicked.connect(self.showPageproductionPlanning3)
+        self.BoxCreator = self.findChild(QWidget, "BoxCreator")
+        self.BoxCreator.add = self.BoxCreator.findChild(QPushButton , "add")
+        self.BoxCreator.profit = self.BoxCreator.findChild(QLineEdit , "profit")
+        self.BoxCreator.weight = self.BoxCreator.findChild(QLineEdit , "weight")
+        self.BoxCreator.item = self.BoxCreator.findChild(QLineEdit , "item")
+        self.productionPlanning2.Benefice = self.productionPlanning2.findChild(QLabel , "Benefice")
+        self.productionPlanning2.items = self.productionPlanning2.findChild(QLabel , "items")
+        self.productionPlanning2.resourceOn = self.productionPlanning2.findChild(QLabel , "resourceOn")
+        self.BoxCreator.add.clicked.connect(self.addNewitem)
+        self.productionPlanning2.error = self.productionPlanning2.findChild(QLabel , "error")
+
+        self.BoxCreatordemande = self.findChild(QWidget, "BoxCreatordemande")
+        self.BoxCreatordemande.add = self.BoxCreatordemande.findChild(QPushButton , "add")
+        self.BoxCreatordemande.produit = self.BoxCreatordemande.findChild(QLineEdit , "produit")
+        self.BoxCreatordemande.production = self.BoxCreatordemande.findChild(QLineEdit , "production")    
+        self.productionPlanning3.error = self.productionPlanning3.findChild(QLabel , "error")
+        self.productionPlanning3.Produits = self.productionPlanning3.findChild(QLabel , "Produits")
+        self.productionPlanning3.productionDemande = self.productionPlanning3.findChild(QLabel , "productionDemande")
         self.productionPlanning3.toSolutionPage.clicked.connect(self.showPageSolutionFromProductionPlanning)
+        self.BoxCreatordemande.add.clicked.connect(self.addNewDemande)
+        print(self.BoxCreatordemande.add)
         # ofr the solution page
         self.solutionPage.nextPage.clicked.connect(self.showPage1)
 
@@ -116,91 +140,95 @@ class MainWindow(QMainWindow):
         print(result)
         self.solutionPage.result.setText(result)
         self.stacked_layout.setCurrentIndex(4)
-    def showPageSolutionFromProductionPlanning(self):
-        demand ={}
-        result = ""
-        pommeDeTerre_checked = self.productionPlanning3.pommeDeTerre.isChecked()
-        if pommeDeTerre_checked:
-            if "pommeDeTerre" in products:
-                test = self.productionPlanning3.pommedemande.text()
-                if not test.isdigit() :
-                    result += "Félix ne peut pas resoudre ! \n la valeur de pomme de terre demandé par le client doit etre positive \n"
-                else:
-                    demand["pommeDeTerre"] =  int(test)
-            else:
-                result += " oh no !  \n les clients veulent avoire de pomme de terre \n alors que les fermiers ne peuvent pas produire de pomme de terre  \n "
-
-        tomate_checked = self.productionPlanning3.tomate.isChecked()
-        if tomate_checked:
-            if "tomate" in products:
-                test = self.productionPlanning3.tomateDemande.text()
-                if not test.isdigit():
-                    result += "Félix ne peut pas resoudre ! \n la valeur de tomate demandé par le client doit etre positive \n"
-                else:
-                    demand["tomate"] = int(test)
-            else:
-                result += " oh no !  \n les clients veulent avoire de tomate \n alors que les fermiers ne peuvent pas produire de tomate \n "
-
-        carotte_checked = self.productionPlanning3.carotte.isChecked()
-        if carotte_checked:
-            if "carotte" in products:
-                test = self.productionPlanning3.CarottesDemande.text()
-                if not test.isdigit() :
-                    result += "Félix ne peut pas resoudre ! \n la valeur de carotte demandé par le client doit etre positive \n"
-                else:
-                    demand["carotte"] =  int(test)
-            else:
-                result += " oh no !  \n les clients veulent avoire de Carottes \n alors que les fermiers ne peuvent pas produire de Carottes \n "
-
-        fraise_checked = self.productionPlanning3.fraise.isChecked()
-        if fraise_checked:
-            if "fraise" in products:
-                test = self.productionPlanning3.fraisesdemandes.text()
-                if not test.isdigit():
-                    result += "Félix ne peut pas resoudre ! \n la valeur de fraise demandé par le client doit etre positive \n"
-                else:
-                    demand["fraise"] = int(test)
-            else:
-                result += " oh no !  \n les clients veulent avoire de fraise \n alors que les fermiers ne peuvent pas produire de fraise \n "
-
-        if not result:
-            result = self.productionPlanningResult(products, profit, production_time, capacity,demand)
-        print(result)
-        self.solutionPage.result.setText(result)
-        self.stacked_layout.setCurrentIndex(4)
     def showPageproductionPlanning2(self):
+        global capacity 
+        capacity = 0
+        global products
+        products=[]
+        global profits
+        profits = {}
+        global production_resources
+        production_resources = {}   
+        self.productionPlanning2.items.setText("")
+        self.productionPlanning2.Benefice.setText("")
+        self.productionPlanning2.resourceOn.setText("")
+        self.productionPlanning2.error.setText("")  
         self.stacked_layout.setCurrentIndex(6)
+    def showPageSolutionFromProductionPlanning(self):
+        try : 
+            print("hey this also ")
+            print(str(capacity))
+            result = ""
+            if not result:
+                result = self.productionPlanningResult(products, profits, production_resources, capacity ,demand)
+            print(result)
+            products.clear()
+            demand.clear() 
+            production_resources.clear()
+            profits.clear()
+            self.productionPlanning3.error.setText("")
+            self.solutionPage.result.setText(result)
+            self.stacked_layout.setCurrentIndex(4)
+        except Exception as e : 
+            print(e)
+            e = str(e)
+            self.productionPlanning3.error.setText("Error" + e )
+    def addNewitem(self) :
+        try : 
+           
+            product = (self.BoxCreator.item.text())
+            profit = int(str(self.BoxCreator.profit.text()).strip())
+            production_resource = int(str(self.BoxCreator.weight.text()).strip())
+            products.append(product)
+            profits[product] = profit
+            production_resources[product] = production_resource
+        
+            x = self.productionPlanning2.items.text()
+            y = self.productionPlanning2.Benefice.text()
+            z = self.productionPlanning2.resourceOn.text()
+            self.productionPlanning2.items.setText(x + str(product) + "\n")
+            self.productionPlanning2.Benefice.setText(y+ str(profit) + "\n")
+            self.productionPlanning2.resourceOn.setText(z + str(production_resource) + "\n")
+            self.productionPlanning2.error.setText("")
+        except Exception as e : 
+            e = str(e) 
+            self.productionPlanning2.error.setText("error" + e )
+    def addNewDemande(self) :
+        try : 
+            product = (self.BoxCreatordemande.produit.text())
+            production = int(str(self.BoxCreatordemande.production.text()).strip())
+            if (product in products):
+                demand[product] = production
+            else : 
+                x = str(products)
+                raise Exception("les Produits valables sont : " + x )     
+            x = self.productionPlanning3.Produits.text()
+            y = self.productionPlanning3.productionDemande.text()
+            self.productionPlanning3.Produits.setText(x + str(product) + "\n")
+            self.productionPlanning3.productionDemande.setText(y+ str(production) + "\n")
+            self.productionPlanning3.error.setText("")
+        except Exception as e : 
+            e = str(e) 
+            print(e)
+            self.productionPlanning3.error.setText("error : " + e )
+        
     def showPageproductionPlanning3(self):
         global capacity
         capacity = self.productionPlanning2.capacity.text()
-        global products
-        products=[]
-        global profit
-        profit = {}
-        global production_time
-        production_time = {}
-
-        pommeDeTerre_checked = self.productionPlanning2.pommeDeTerre.isChecked()
-        if pommeDeTerre_checked:
-            products.append("pommeDeTerre")
-            profit["pommeDeTerre"] = self.productionPlanning2.pommedeterreprofit.text()
-            production_time["pommeDeTerre"]  = self.productionPlanning2.pommedeterretime.text()
-        tomate_checked = self.productionPlanning2.tomate.isChecked()
-        if tomate_checked:
-            products.append("tomate")
-            profit["tomate"] = self.productionPlanning2.tomatesprofit.text()
-            production_time["tomate"] = self.productionPlanning2.tomatestime.text()
-        carotte_checked = self.productionPlanning2.carotte.isChecked()
-        if carotte_checked:
-            products.append("carotte")
-            profit["carotte"] = self.productionPlanning2.carottesprofit.text()
-            production_time["carotte"] = self.productionPlanning2.carottestime.text()
-        fraise_checked = self.productionPlanning2.fraise.isChecked()
-        if fraise_checked:
-            products.append("fraise")
-            profit["fraise"] = self.productionPlanning2.fraisesprofit.text()
-            production_time["fraise"] = self.productionPlanning2.fraisestime.text()
-
+        capacity = int(capacity)
+        global demand 
+        demand = {}
+        try :
+            
+            if (len(products) == 0 ) : 
+                raise Exception("longeur > 0 ")
+        except Exception as e : 
+            print(e)
+            e = str(e)
+            self.productionPlanning2.error.setText("error : " + e )
+            self.productionPlanning3.Produits.setText("")
+            self.productionPlanning3.productionDemande.setText("")
+            return
         self.stacked_layout.setCurrentIndex(7)
     def knapSacResult(self,keys, values, capacity):
         # making sure that capacity is a positive number
@@ -224,32 +252,10 @@ class MainWindow(QMainWindow):
         return knapSac.knapsack_solver(keys,values,capacity)
 
     def productionPlanningResult(self,products, profit,production_time, capacity,demand):
-        # making sure that capacity is a positive number
-        if not (capacity.isdigit()):
-            return " les fermiers n'avaient pas correctement saisir la capacité ! \n Félix ne pouvait pas trouver une solution \n "
-        if int(capacity) <= 0:
-            return " les femiers avaient donné un entier negative pour la capacité maximal ! \n la capacité maximal doit etre un entier strictement positive \n "
-        capacity = int(capacity)
-        # making sure there's  min a key checked
-        if not products:
-            return " aucune information etaint inserré ,\n comment Félix pourrait-il trouver une solution ? \n "
-            # making sure that every value entered is an enteger
-        for key in products:
-            if not (profit[key].isdigit()):
-                return " les valeurs données par les fermiers etaient incorrect ! \n \n Félix ne pouvait pas trouver une solution \n"
-            if int(profit[key]) == 0:
-                return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
-            profit[key] = int(profit[key])
-            # testing product time is a correct number
-            if not (production_time[key].isdigit()):
-                return " les valeurs données par les fermiers  etaient incorrect ! \n \n Félix ne pouvait pas trouver une solution \n"
-            if int(production_time[key]) == 0:
-                return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
-            production_time[key] = int(production_time[key])
         result = productionPlannuing.solve_production_planning(products,profit,production_time,capacity,demand)
         return result
 app = QApplication([])
 window = MainWindow()
-window.resize(1000, 900)
+window.resize(1087, 1027)
 window.show()
 sys.exit(app.exec())

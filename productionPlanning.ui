@@ -20,7 +20,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>30</y>
+     <y>40</y>
      <width>901</width>
      <height>531</height>
     </rect>
@@ -44,8 +44,8 @@ color: rgb(0, 0, 127);</string>
   <widget class="QPushButton" name="toProductionPlanningPage">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>620</y>
+     <x>560</x>
+     <y>700</y>
      <width>311</width>
      <height>71</height>
     </rect>
