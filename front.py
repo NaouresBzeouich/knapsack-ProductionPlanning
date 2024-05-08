@@ -74,9 +74,48 @@ class MainWindow(QMainWindow):
         self.productionPlanning3.productionDemande = self.productionPlanning3.findChild(QLabel , "productionDemande")
         self.productionPlanning3.toSolutionPage.clicked.connect(self.showPageSolutionFromProductionPlanning)
         self.BoxCreatordemande.add.clicked.connect(self.addNewDemande)
-        print(self.BoxCreatordemande.add)
         # ofr the solution page
+        self.Knapsack = self.findChild(QWidget, "Knapsack")
+        self.Knapsack.add = self.Knapsack.findChild(QPushButton , "Add")
+        self.Knapsack.produit = self.Knapsack.findChild(QLineEdit , "Produit")
+        self.Knapsack.importance = self.Knapsack.findChild(QLineEdit , "importance")
+        self.Knapsack.poid = self.Knapsack.findChild(QLineEdit , "Poids")
+
+        self.knapSacpage2.error = self.knapSacpage2.findChild(QLabel , "Error")
+        self.knapSacpage2.Produits = self.knapSacpage2.findChild(QLabel , "Produits")
+        self.knapSacpage2.importance = self.knapSacpage2.findChild(QLabel , "Importance")
+        self.knapSacpage2.poids = self.knapSacpage2.findChild(QLabel , "poids")
         self.solutionPage.nextPage.clicked.connect(self.showPage1)
+        self.Knapsack.add.clicked.connect(self.addNewProduit)
+
+    def addNewProduit(self): 
+        global weights
+        global produit
+        global keys
+        produit = self.Knapsack.produit.text()
+        produit = str(produit) 
+        poid= self.Knapsack.poid.text()
+        poid = int(str(poid).strip())
+        if(len(produit) <= 0) :
+            raise Exception("ya 5ouya ikteb haja fil Produit")
+        importance = int(str(self.Knapsack.importance.text()).strip())
+        keys.append(produit)
+        values[produit] = importance  
+        weights[produit] = poid
+
+        x = self.knapSacpage2.Produits.text()
+        y = self.knapSacpage2.importance.text()
+        z = self.knapSacpage2.poids.text()
+        self.knapSacpage2.Produits.setText(x + str(produit) + "\n")
+        self.knapSacpage2.importance.setText(y+ str(importance) + "\n")
+        self.knapSacpage2.poids.setText(z+ str(poid) + "\n")
+        try : 
+            self.knapSacpage2.error.setText("")
+        except Exception as e : 
+            print(e)
+            self.knapSacpage2.error.setText("error :" + str(e) )
+
+
 
     def showPage1(self):
         self.stacked_layout.setCurrentIndex(0)
@@ -87,59 +126,34 @@ class MainWindow(QMainWindow):
     def showPageplanningProduction1(self):
         self.stacked_layout.setCurrentIndex(5)
     def showPageknapSac2(self):
+        global keys 
+        keys =[]
+        global values
+        values = {}
+        global weights 
+        weights = {}
         self.stacked_layout.setCurrentIndex(3)
     def showPageSolutionFromKnapSack(self):
         # getting the inputs
         # getting the capacity
-        capacity = self.knapSacpage2.capacity.text()
-        print(capacity)
-        # getting the items checked and add their value
-        keys = []
-        values = {}
-        pomme_checked = self.knapSacpage2.pomme.isChecked()
-        if pomme_checked:
-            keys.append("pomme")
-            values["pomme"] = self.knapSacpage2.pommeValue.text()
-        boutielleDEau_checked = self.knapSacpage2.boutielleDEau.isChecked()
-        if boutielleDEau_checked:
-            keys.append("bouteilleDEeau")
-            values["bouteilleDEeau"] = self.knapSacpage2.bouteilleDEauValue.text()
-        lampeDePoche_checked = self.knapSacpage2.lampeDePoche.isChecked()
-        if lampeDePoche_checked:
-            keys.append("lampe")
-            values["lampe"] = self.knapSacpage2.lampeValue.text()
-        carte_checked = self.knapSacpage2.carte.isChecked()
-        if carte_checked:
-            keys.append("carte")
-            values["carte"] = self.knapSacpage2.carteValue.text()
-        kitSecours_checked = self.knapSacpage2.kitSecours.isChecked()
-        if kitSecours_checked:
-            keys.append("kitSecours")
-            values["kitSecours"] = self.knapSacpage2.kitSecoursValue.text()
-        telephone_checked = self.knapSacpage2.telephone.isChecked()
-        if telephone_checked:
-            keys.append("telephone")
-            values["telephone"] = self.knapSacpage2.telephoneValue.text()
-        livre_checked = self.knapSacpage2.livre.isChecked()
-        if livre_checked:
-            keys.append("livre")
-            values["livre"] = self.knapSacpage2.livreValue.text()
-        sacDeCouchage_checked = self.knapSacpage2.sacDeCouchage.isChecked()
-        if sacDeCouchage_checked:
-            keys.append("sacDeCouchage")
-            values["sacDeCouchage"] = self.knapSacpage2.sacDeCouchageValue.text()
-        corde_checked = self.knapSacpage2.corde.isChecked()
-        if corde_checked:
-            keys.append("corde")
-            values["corde"] = self.knapSacpage2.cordeValue.text()
-        tente_checked = self.knapSacpage2.tente.isChecked()
-        if tente_checked:
-            keys.append("tente")
-            values["tente"] = self.knapSacpage2.tenteValue.text()
-        result = self.knapSacResult(keys, values, capacity)
-        print(result)
-        self.solutionPage.result.setText(result)
-        self.stacked_layout.setCurrentIndex(4)
+        try : 
+            capacity = self.knapSacpage2.capacity.text()
+            capacity = int(capacity)
+            print(capacity )
+            result = self.knapSacResult(keys, values, capacity , weights)
+            self.solutionPage.result.setText(result)
+            weights.clear() 
+            keys.clear()
+            values.clear()
+            self.knapSacpage2.Produits.setText("")
+            self.knapSacpage2.poids.setText("")
+            self.knapSacpage2.importance.setText("")
+            self.knapSacpage2.error.setText("")  
+            self.stacked_layout.setCurrentIndex(4)
+        except Exception as e : 
+            print("hello") 
+            print(e)
+            self.knapSacpage2.error.setText("Error : " + str(e))
     def showPageproductionPlanning2(self):
         global capacity 
         capacity = 0
@@ -175,8 +189,10 @@ class MainWindow(QMainWindow):
             self.productionPlanning3.error.setText("Error" + e )
     def addNewitem(self) :
         try : 
-           
             product = (self.BoxCreator.item.text())
+            product = str(product) 
+            if(len(product) <= 0) :
+                raise Exception("ya 5ouya ikteb haja fil product")
             profit = int(str(self.BoxCreator.profit.text()).strip())
             production_resource = int(str(self.BoxCreator.weight.text()).strip())
             products.append(product)
@@ -192,7 +208,7 @@ class MainWindow(QMainWindow):
             self.productionPlanning2.error.setText("")
         except Exception as e : 
             e = str(e) 
-            self.productionPlanning2.error.setText("error" + e )
+            self.productionPlanning2.error.setText("error :" + e )
     def addNewDemande(self) :
         try : 
             product = (self.BoxCreatordemande.produit.text())
@@ -230,26 +246,11 @@ class MainWindow(QMainWindow):
             self.productionPlanning3.productionDemande.setText("")
             return
         self.stacked_layout.setCurrentIndex(7)
-    def knapSacResult(self,keys, values, capacity):
-        # making sure that capacity is a positive number
-        if not(capacity.isdigit()):
-            return " le voyageur n'avait pas correctement saisir la capacité ! \n Félix ne pouvait pas trouver une solution \n "
-        if int(capacity) <= 0:
-            return " le voyageur avait donné un entier negative pour la capacité maximal ! \n la capacité maximal de son sac à dos doit etre un entier strictement positive \n "
-        capacity = int(capacity)
-        # making sure there's  min a key checked
-        if not keys:
-            return " aucune information etaint inserré ,\n comment Félix pourrait-il trouver une solution ? \n "
-        # making sure that every value entered is an enteger
-        for key in keys:
-            if not (values[key].isdigit()):
-                return " les valeurs données par le voyageurs etaient incorrect ! \n \n Félix ne pouvait pas trouver une solution \n"
-            if int(values[key]) == 0:
-                return " il y etait un valeur non saisie ! \n \n Félix ne pouvait pas trouver une solution \n"
-            values[key] = int(values[key])
+    def knapSacResult(self,keys, values, capacity , weights):
+        
         print(values)
         print(capacity)
-        return knapSac.knapsack_solver(keys,values,capacity)
+        return knapSac.knapsack_solver(keys,values,capacity , weights )
 
     def productionPlanningResult(self,products, profit,production_time, capacity,demand):
         result = productionPlannuing.solve_production_planning(products,profit,production_time,capacity,demand)
